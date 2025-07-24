@@ -25,7 +25,7 @@ I learned that constructors are special tyoe of function and it is optional in s
 They run once during contract deployment to initialize the contract. They can accept parameters to make contracts configurable rather than hard-coding values. If I don't write a constructor, Solidity uses a default empty one. The constructor code isn't included in the final deployed bytecode since it's only needed once.
 
 **Interfaces and Abstract Contracts**
-I understood that interfaces are like menus - they list function signatures without implementation, allowing contracts to interact with each other. Abstract contracts can have some implemented functions but must have at least one unimplemented function. Interfaces enable the "composability" that makes DeFi protocols work like "money Legos."
+I understood that interfaces are like menus - they list function signatures without implementation, allowing contracts to interact with each other. Abstract contracts can have some implemented functions but must have at least one unimplemented function. Interfaces enable the "composability" that makes DeFi protocols work like "money Legos.", that is i can can write smart contracts that interact with other smart contracts that interact with other smart contracts and so on
 
 **Data Types**
 I learned Solidity has value types (copied when passed) and reference types (passed by reference):
