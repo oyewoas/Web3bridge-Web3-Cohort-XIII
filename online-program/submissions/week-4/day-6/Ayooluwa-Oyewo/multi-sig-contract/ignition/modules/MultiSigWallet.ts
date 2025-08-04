@@ -10,7 +10,7 @@ const MultiSigWalletModule = buildModule("MultiSigWalletModule", (m) => {
         "0x4E4E7e8ea62E6CD3568Eb218B38A8078EB83eD63",
     ]);
 
-    const multiSigWallet = m.contract("MultiSigWallet", [requiredConfirmations, owners]);
+    const multiSigWallet = m.contract("MultiSigWallet", [owners, requiredConfirmations]);
 
     return { multiSigWallet };
 });
