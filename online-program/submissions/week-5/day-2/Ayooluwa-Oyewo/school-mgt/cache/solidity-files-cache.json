@@ -1,0 +1,77 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/oyewoas/Documents/software_projects/web3bridge/solidity_projects/Web3bridge-Web3-Cohort-XIII/online-program/submissions/week-5/day-2/Ayooluwa-Oyewo/school-mgt/contracts/Lock.sol": {
+      "lastModificationDate": 1754419493287,
+      "contentHash": "7eee587c347fe6b1de50c96688cb9477",
+      "sourceName": "contracts/Lock.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "Lock"
+      ]
+    },
+    "/Users/oyewoas/Documents/software_projects/web3bridge/solidity_projects/Web3bridge-Web3-Cohort-XIII/online-program/submissions/week-5/day-2/Ayooluwa-Oyewo/school-mgt/contracts/SchoolMgt.sol": {
+      "lastModificationDate": 1754420204014,
+      "contentHash": "c3e6f7482607a8507c6eae9ecba0b98a",
+      "sourceName": "contracts/SchoolMgt.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "SchoolMgt"
+      ]
+    }
+  }
+}
