@@ -3,9 +3,12 @@
 
 import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
 
-const MyNftModule = buildModule("MyNftModule", (m) => {
-  const myNft = m.contract("MyNft");
-  return { myNft };
+
+const EventTicketingModule = buildModule("EventTicketingModule", (m) => {
+
+  const eventTicketing = m.contract("EventTicketing", []);
+
+  return { eventTicketing };
 });
 
-export default MyNftModule;
+export default EventTicketingModule;
