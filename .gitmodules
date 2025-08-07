@@ -1,0 +1,3 @@
+[submodule "online-program/submissions/week-5/day-4/Ayooluwa-Oyewo/staking/lib/forge-std"]
+	path = online-program/submissions/week-5/day-4/Ayooluwa-Oyewo/staking/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
