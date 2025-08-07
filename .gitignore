@@ -75,8 +75,6 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
-.env.local
 .env.development.local
 .env.test.local
 .env.production.local
@@ -117,7 +115,6 @@ typings/
 *.tmp
 *.temp 
 node_modules
-.env
 
 onsite-program/tasks/week-3/Abasiodiong-udofia
 
@@ -135,3 +132,4 @@ onsite-program/tasks/week-3/Abasiodiong-udofia
 
 # Hardhat Ignition default folder for deployments against a local node
 ignition/deployments/chain-31337
+config.bat
