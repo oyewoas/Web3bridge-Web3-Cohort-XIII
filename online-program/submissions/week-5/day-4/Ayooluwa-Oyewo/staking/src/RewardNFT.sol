@@ -6,7 +6,7 @@ import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 import {Base64} from "@openzeppelin/contracts/utils/Base64.sol";
 import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
 
-contract MyRewardNFT is ERC721, Ownable {
+contract RewardNFT is ERC721 {
     using Strings for uint256;
 
     uint256 private _nextTokenId;
@@ -23,7 +23,7 @@ contract MyRewardNFT is ERC721, Ownable {
     mapping(uint256 => string[]) private _tokenAttributes;
     mapping(uint256 => string[]) private _tokenValues;
 
-    constructor(string memory name, string memory symbol) ERC721(name, symbol) Ownable(msg.sender) {}
+    constructor(string memory name, string memory symbol) ERC721(name, symbol) {}
 
     // Events
     event NftMinted(uint256 indexed tokenId, address indexed recipient, string name);
@@ -51,7 +51,7 @@ contract MyRewardNFT is ERC721, Ownable {
         string memory image,
         string[] memory attributes,
         string[] memory values
-    ) public onlyOwner returns (uint256) {
+    ) public returns (uint256) {
         if (recipient == address(0)) {
             revert MyOnChainNft_NoRecipient();
         }
@@ -90,7 +90,7 @@ contract MyRewardNFT is ERC721, Ownable {
         string memory name,
         string memory description,
         string memory image
-    ) public onlyOwner returns (uint256) {
+    ) public returns (uint256) {
         string[] memory emptyAttributes = new string[](0);
         string[] memory emptyValues = new string[](0);
         
@@ -136,7 +136,7 @@ contract MyRewardNFT is ERC721, Ownable {
         string memory color,
         string[] memory attributes,
         string[] memory values
-    ) public onlyOwner returns (uint256) {
+    ) public returns (uint256) {
         uint256 tokenId = _nextTokenId;
         string memory imageDataURI = generateSVGDataURI(tokenId, color);
         
@@ -227,7 +227,7 @@ contract MyRewardNFT is ERC721, Ownable {
         string memory image,
         string[] memory attributes,
         string[] memory values
-    ) external onlyOwner {
+    ) external {
         if (!_exists(tokenId)) {
             revert MyOnChainNft_NotMinted();
         }
@@ -255,7 +255,7 @@ contract MyRewardNFT is ERC721, Ownable {
     /**
      * @dev Burn an NFT
      */
-    function burn(uint256 tokenId) public onlyOwner {
+    function burn(uint256 tokenId) public {
         _burn(tokenId);
         delete _tokenMetadata[tokenId];
         delete _tokenAttributes[tokenId];

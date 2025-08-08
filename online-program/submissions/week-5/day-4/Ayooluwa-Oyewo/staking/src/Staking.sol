@@ -2,11 +2,10 @@
 pragma solidity ^0.8.28;
 
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 import {RewardNFT} from "./RewardNFT.sol";
 import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
 
-contract NFTStaking is Ownable {
+contract NFTStaking {
     using Strings for uint256;
 
     IERC20 public stakingToken; // ERC20 token to stake
@@ -49,7 +48,7 @@ contract NFTStaking is Ownable {
     }
 
     function stake(uint256 amount) external {
-        if (amount == 0) revert NFTStaking_InvalidAmount();
+        if (amount <= 0) revert NFTStaking_InvalidAmount();
         if (stakingToken.balanceOf(msg.sender) < amount) revert NFTStaking_NotEnoughTokens();
         if (stakes[msg.sender].amount > 0) revert NFTStaking_AlreadyStaked();
 
@@ -58,7 +57,7 @@ contract NFTStaking is Ownable {
         uint256 unlockTime = block.timestamp + lockPeriod;
 
         string[] memory attributes = new string[](2);
-        string ;
+        string[] memory values = new string[](2);
         attributes[0] = "Stake Amount";
         attributes[1] = "Unlock Time";
         values[0] = Strings.toString(amount);
@@ -86,7 +85,7 @@ contract NFTStaking is Ownable {
 
     function unstake() external {
         StakeInfo memory info = stakes[msg.sender];
-        if (info.amount == 0) revert NFTStaking_NotStaked();
+        if (info.amount <= 0) revert NFTStaking_NotStaked();
         if (block.timestamp < info.unlockTime) revert NFTStaking_LockPeriodNotOver();
 
         stakingToken.transfer(msg.sender, info.amount);
