@@ -4,3 +4,6 @@
 [submodule "online-program/submissions/week-5/day-4/Ayooluwa-Oyewo/staking/lib/openzeppelin-contracts"]
 	path = online-program/submissions/week-5/day-4/Ayooluwa-Oyewo/staking/lib/openzeppelin-contracts
 	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "online-program/submissions/week-5/day-4/Ayooluwa-Oyewo/multisig-wallet/lib/forge-std"]
+	path = online-program/submissions/week-5/day-4/Ayooluwa-Oyewo/multisig-wallet/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
