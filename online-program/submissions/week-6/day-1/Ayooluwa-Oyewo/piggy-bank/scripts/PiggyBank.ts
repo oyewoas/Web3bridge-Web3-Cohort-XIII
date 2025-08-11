@@ -39,6 +39,7 @@ async function main() {
     // Get factory admin (assuming deployer is admin for demo)
 
     const factoryAdmin = piggyBankFactory.admin();
+    console.log("Factory Admin:", factoryAdmin);
 
     // Deploy PiggyBank for ERC20
     console.log("\nDeploying PiggyBank for ERC20...");
