@@ -1,6 +1,6 @@
 import { ethers } from "hardhat";
 
-const whaleAddress = "";
+const whaleAddress = "0x47ac0Fb4F2D84898e4D9E7b4DaB3C24507a6D503";
 const routerAddress = "0xf164fC0Ec4E93095b804a4795bBe1e041497b92a";
 let pairAddress;
 const usdtAddress = "0xdAC17F958D2ee523a2206206994597C13D831ec7";
